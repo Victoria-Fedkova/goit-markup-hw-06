@@ -13,6 +13,7 @@
   --secondary-text-color: #757575;
   --accent-color: #2196f3;
   --bg-color: #f5f4fa;
+  --bg-accent-color: #f5f4fa;
   --main-white-color: #fff;
   --logo-svg-color: #afb1b8;
   --footer-bg: #2f303a;
@@ -122,6 +123,23 @@ body {
   font-size: 16px;
   line-height: 1.2;
 }
+.social-media-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--main-white-color);
+}
+.social-media-link:hover {
+  background-color: var(--accent-color);
+}
+
+.icon {
+  fill: currentColor;
+}
 .hidden {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
@@ -174,8 +192,14 @@ body {
   margin-left: auto;
 }
 .contacts .link {
+  display: flex;
+  align-items: center;
   color: var(--secondary-text-color);
 }
+.contacts-item .icon {
+  margin-right: 10px;
+}
+
 .site-nav-list-item:not(:last-child),
 .contacts-item:not(:last-child) {
   margin-right: 50px;
@@ -191,7 +215,7 @@ body {
 
 .hero {
   display: flex;
-  background-color: var(--footer-bg);
+  background-image: url('../img/overlay.png'), url('../img/hero.jpg');
   justify-content: center;
   align-items: center;
   height: 600px;
@@ -222,7 +246,8 @@ body {
 }
 .features-list-item:not(:last-child),
 .team-list-item:not(:last-child),
-.works-list-item:not(:last-child) {
+.works-list-item:not(:last-child),
+.clients-list-item:not(:last-child) {
   margin-right: 30px;
 }
 .section .title {
@@ -237,7 +262,16 @@ body {
   font-size: 14px;
   line-height: 1.71;
 }
-
+.features-thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+  background-color: var(--bg-accent-color);
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
 /* =======about us section========= */
 .works.section {
   padding-top: 0;
@@ -265,6 +299,7 @@ body {
 }
 .team-list .description {
   text-align: center;
+  margin-bottom: 16px;
 }
 .team-list .card-description {
   padding: 30px 0;
@@ -273,14 +308,44 @@ body {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-
+.card-description .social-media-link {
+  color: var(--logo-svg-color);
+}
+.card-description .social-media-link:hover {
+  color: var(--main-white-color);
+}
+.card-description .social-media-list {
+  justify-content: center;
+}
+/* =======clients section style===== */
+.clients-list {
+  display: flex;
+}
+.clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--logo-svg-color);
+  border-radius: 4px;
+  color: var(--logo-svg-color);
+}
+.clients-link:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
 /* ==========footer style=========== */
 
-.footer.has-bg {
+.footer {
   background-color: var(--footer-bg);
-}
-.footer.section {
   padding: 60px 0;
+}
+.footer .container {
+  display: flex;
+}
+.footer-address {
+  margin-right: 70px;
 }
 .footer .logo {
   display: inline-block;
@@ -304,10 +369,17 @@ body {
   margin-bottom: 9px;
 }
 .footer .subtitle {
+  display: inline-block;
   text-transform: uppercase;
   color: var(--main-white-color);
+  margin-bottom: 20px;
 }
-
+.social-media-list {
+  display: flex;
+}
+.social-media-item:not(:last-child) {
+  margin-right: 10px;
+}
 /* ==========Portfolio page styles======== */
 
 /* buttons */
