@@ -86,6 +86,7 @@ body {
   border-radius: 4px;
   border: none;
   border-color: var(--bg-color);
+  cursor: pointer;
 }
 
 /* .button:hover {
@@ -200,10 +201,15 @@ body {
   margin-right: 10px;
 }
 
-.site-nav-list-item:not(:last-child),
+/* .site-nav-list-item:not(:last-child),
 .contacts-item:not(:last-child) {
   margin-right: 50px;
+} */
+.site-nav-list-item + .site-nav-list-item,
+.contacts-item + .contacts-item {
+  margin-left: 50px;
 }
+
 .site-nav-list .link:hover,
 .site-nav-list .link:focus,
 .contacts .link:hover,
@@ -219,6 +225,7 @@ body {
   align-items: center;
   max-width: 1600px;
   height: 600px;
+  margin: 0 auto;
   background-color: var(--footer-bg);
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url('../img/hero.jpg');
@@ -349,6 +356,7 @@ body {
 }
 .footer .container {
   display: flex;
+  align-items: baseline;
 }
 .footer-address {
   margin-right: 70px;
@@ -386,6 +394,9 @@ body {
 .social-media-item:not(:last-child) {
   margin-right: 10px;
 }
+/* .footer-social-media {
+  padding-top: 12px;
+} */
 /* ==========Portfolio page styles======== */
 
 /* buttons */
