@@ -561,24 +561,33 @@ body {
   height: 100%;
   cursor: not-allowed;
   background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms var(--timing-function);
 }
 
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+  transition: opacity 250ms var(--timing-function), opacity 250ms var(--timing-function);
 }
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
 
   display: block;
   min-width: 528px;
   min-height: 581px;
   cursor: auto;
   background-color: var(--main-white-color);
+
+  transition: transform 250ms var(--timing-function);
 }
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
 .modal-button {
   position: absolute;
   top: 8px;
