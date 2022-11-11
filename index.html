@@ -53,7 +53,7 @@
       <section class="hero">
         <div class="hero-content">
           <h1 class="title">Ефективні рішення для вашого бізнесу</h1>
-          <button type="button" class="button primary">Замовити послугу</button>
+          <button type="button" class="button primary" data-modal-open>Замовити послугу</button>
   
         </div>
       </section>
@@ -124,23 +124,39 @@
           <h2 class="title">Чим ми займаємося</h2>
           <ul class="works-list list">
             <li class="works-list-item">
-              <img
+              <div class="works-list-thumb">
+                <img
                 src="./img/desctop.jpg"
                 width="370"
                 height="294"
                 alt="Box 1"
               />
+              <div class="works-overlay">
+                <p class="works-overlay-text">Десктопні додатки</p>
+              </div> 
+              </div>
             </li>
             <li class="works-list-item">
-              <img src="./img/note.jpg" width="370" height="294" alt="Box 2" />
+              <div class="works-list-thumb">
+                <img src="./img/note.jpg" width="370" height="294" alt="Box 2" />
+                <div class="works-overlay">
+                  <p class="works-overlay-text">Дизайнерські рішення</p>
+                </div> 
+  
+              </div>
             </li>
             <li class="works-list-item">
-              <img
+              <div class="works-list-thumb">
+                <img
                 src="./img/featers3.jpg"
                 width="370"
                 height="294"
                 alt="Box 3"
               />
+              <div class="works-overlay">
+                <p class="works-overlay-text">Мобільні додатки</p>
+              </div> 
+              </div>
             </li>
           </ul>
         </div>
@@ -611,5 +627,14 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden"  data-modal>
+      <div class="modal">
+        <button type="button" class="modal-button" data-modal-close>
+          &#10005;
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
+    </script>
   </body>
 </html>
