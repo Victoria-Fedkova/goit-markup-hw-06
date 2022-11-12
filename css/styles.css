@@ -545,9 +545,12 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  height: 100%;
   max-width: 100%;
-  padding: 63px 24px;
-
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transform: translateY(100%);
 
   background-color: rgba(33, 150, 243, 0.9);
