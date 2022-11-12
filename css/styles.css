@@ -74,8 +74,7 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
 
-  transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function),
-    border-color 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function);
 }
 .button {
   color: var(--primary-text-color);
@@ -140,6 +139,7 @@ body {
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
   color: var(--main-white-color);
+  transition: background-color 250ms var(--timing-function);
 }
 .social-media-link:hover {
   background-color: var(--accent-color);
@@ -390,13 +390,14 @@ body {
 }
 .team-list .card-description {
   padding: 30px 0;
-  background: #ffffff;
+  background: var(--main-white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 .card-description .social-media-link {
   color: var(--logo-svg-color);
+  transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function);
 }
 .card-description .social-media-link:hover {
   color: var(--main-white-color);
@@ -417,6 +418,7 @@ body {
   border: 1px solid var(--logo-svg-color);
   border-radius: 4px;
   color: var(--logo-svg-color);
+  transition: color 250ms var(--timing-function), border-color 250ms var(--timing-function);
 }
 .clients-link:hover {
   color: var(--accent-color);
@@ -510,9 +512,13 @@ body {
   margin-top: 30px;
   margin-left: 30px;
   max-width: calc(100% / 3 - 30px);
+}
+.cards-set-thumb {
+  display: block;
   transition: box-shadow 250ms var(--timing-function);
 }
-.cards-set-list-item:hover {
+.cards-set-thumb:hover,
+.cards-set-thumb:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -548,7 +554,7 @@ body {
 
   transition: transform 250ms var(--timing-function);
 }
-.cards-set-list-item:hover .cards-thumb-overlay {
+.cards-set-thumb:hover .cards-thumb-overlay {
   transform: translateY(0);
 }
 
@@ -599,6 +605,8 @@ body {
 
   width: 30px;
   height: 30px;
+
+  cursor: pointer;
 
   font-weight: 700;
   line-height: 1;
