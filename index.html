@@ -553,22 +553,98 @@
         </div>
 
         <div class="footer-form-wrapper">
-          <b class="subtitle">Підпишіться на розсилку</b>
-          <form action="get" class="footer-form">
-            <input type="email" name="" id="" placeholder="E-mail" class="form-input" />
-            <button class="form-button button">
-              Підписатися
-              <svg class="icon" width="20" height="20">
-                <use href="./img/sprite.svg#send"></use>
-              </svg>
-            </button>
+          <form class="footer-form" autocomplete="off">
+            <label for="email" class="formfield-label">
+              <span class="subtitle">Підпишіться на розсилку</span>
+            </label>
+            <div class="footer-formfield">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="E-mail"
+                class="footer-form-input"
+                required
+              />
+              <button class="form-button button" type="submit">
+                Підписатися
+                <svg class="icon" width="20" height="20">
+                  <use href="./img/sprite.svg#send"></use>
+                </svg>
+              </button>
+            </div>
           </form>
         </div>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button type="button" class="modal-button" data-modal-close>&#10005;</button>
+        <p class="modal-heading">Залиште свої дані, ми вам передзвонимо</p>
+        <form class="modal-form" autocomplete="off">
+          <label class="modal-form-field">
+            <span class="modal-form-label">Ім'я</span>
+            <input type="text" name="name" placeholder=" " class="modal-form-input" />
+            <svg class="modal-form-icon icon" width="18" height="18">
+              <use href="./img/icons.svg#person"></use>
+            </svg>
+          </label>
+
+          <label for="name" class="modal-form-field">
+            <span class="modal-form-label">Телефон</span>
+            <input type="tel" name="tel" placeholder=" " class="modal-form-input" />
+            <svg class="modal-form-icon icon" width="18" height="18">
+              <use href="./img/icons.svg#phone"></use>
+            </svg>
+          </label>
+
+          <label class="modal-form-field">
+            <span class="modal-form-label">Пошта</span>
+            <input type="text" name="name" placeholder=" " class="modal-form-input" />
+            <svg class="modal-form-icon icon" width="18" height="18">
+              <use href="./img/icons.svg#email"></use>
+            </svg>
+          </label>
+
+          <label for="feedback" class="modal-form-field">
+            <span class="modal-form-label">Коментар</span>
+            <textarea
+              name="feedback"
+              id="feedback"
+              rows="5"
+              placeholder="Введіть текст"
+              class="modal-form-input feedback"
+            ></textarea>
+          </label>
+
+          <div class="checkbox-wrapper">
+            <input
+              type="checkbox"
+              name="policy"
+              value=""
+              id="policy"
+              class="form-checkbox hidden"
+            />
+            <label for="policy" class="modal-form-label policy">
+              <span class="checkbox">
+                <svg class="modal-checkbox-icon icon" width="13" height="12">
+                  <use href="./img/icons.svg#Vector-1"></use>
+                </svg>
+              </span>
+              <span>
+                Погоджуюся з розсилкою та приймаю
+                <a href="" class="modal-policy link">Умови договору</a></span
+              >
+            </label>
+          </div>
+
+          <button type="submit" class="modal-submit primary button">Відправити</button>
+        </form>
+
+        <button type="button" class="modal-button" data-modal-close>
+          <svg class="modal-close icon" width="18" height="18">
+            <use href="./img/icons.svg#close"></use>
+          </svg>
+        </button>
       </div>
     </div>
     <script src="./js/modal.js"></script>
