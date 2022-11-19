@@ -521,7 +521,7 @@ body {
   color: var(--main-white-color);
 }
 .footer-form-input:focus {
-  outline: 1px solid var(--accent-color);
+  outline: 2px inset var(--accent-color);
 }
 .footer-form-input::placeholder {
   transition: color 250ms var(--timing-function);
@@ -734,7 +734,7 @@ body {
   border-color: var(--accent-color);
 }
 .modal-form-input:focus {
-  outline: 1px solid var(--accent-color);
+  outline: 2px inset var(--accent-color);
 }
 .modal-form-input:hover + .modal-form-icon,
 .modal-form-input:focus + .modal-form-icon,
