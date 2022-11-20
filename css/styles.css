@@ -765,6 +765,7 @@ body {
   cursor: pointer;
 }
 .modal-policy.link {
+  font-weight: normal;
   text-decoration: underline;
   color: var(--accent-color);
 }
